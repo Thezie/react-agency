@@ -1,0 +1,115 @@
+/* ============== table of contents ============== 
+    1- left section => buttons & responsive
+    2- right section => cards
+*/
+/* ============= 1- left section => buttons & responsive============= */
+main .left-section.flex {
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 767px) {
+  main.flex {
+    flex-direction: column;
+  }
+  main .left-section.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+main .left-section button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  padding: 0.8rem 0;
+  font-size: 1.07rem;
+  border-radius: 5px;
+  opacity: 0.5;
+  text-align: center;
+  letter-spacing: 0.7px;
+  transition: var(--transition);
+}
+@media (max-width: 767px) {
+  main .left-section button {
+    width: 7rem;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+main .left-section button:hover {
+  opacity: 1;
+}
+main .left-section button.active {
+  opacity: 1;
+  border: 1px solid var(--blue);
+  font-weight: bold;
+}
+.light main .left-section button.active {
+  border: 1px solid #000;
+}
+/* ============= 2- right section => cards ============= */
+main .right-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+main .card {
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 1px 1px 1px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+  border-radius: 5px;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+.light .card,
+.light .card:hover {
+  border: none;
+}
+.light .card:hover {
+  background-color: rgba(246, 246, 246);
+}
+main .card:hover {
+  border: 1px solid var(--blue);
+  rotate: 1deg;
+  scale: 1.01;
+  cursor: pointer;
+}
+main .card img {
+  width: 100%;
+  border-radius: 5px;
+}
+main .card .box {
+  margin: 1.1rem 0;
+  padding: 0 0.5rem;
+}
+main .box .title {
+  font-size: 1.3rem;
+  color: var(--title);
+  margin-bottom: 0.8rem;
+}
+main .box .description {
+  color: var(--subtitle);
+  font-size: 0.8rem;
+}
+main .links {
+  gap: 16px;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+main .links > button {
+  font-size: 1.2rem;
+  color: var(--subtitle);
+}
+main .links > button:hover {
+  font-size: 1.25rem;
+  color: var(--icon-hover);
+}
+main .links .more {
+  margin-left: auto;
+  color: var(--blue);
+}
+main .more button {
+  vertical-align: bottom;
+  margin: 0 9px 1px;
+}

@@ -1,0 +1,118 @@
+/* ============== table of contents ============== 
+    1- Header design & responsive
+    2- Icons & button 
+    3- Modal / pop up
+
+*/
+/* ============= 1- Header design & responsive ============= */
+header.flex {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.7rem;
+}
+header.flex ul.flex {
+  background-color: var(--bgHeader);
+  padding: 1rem 2rem;
+  border-radius: 55px;
+}
+header ul.flex {
+  gap: 16px;
+  box-shadow: 1px 1px 40px rgba(53, 50, 50, 0.292);
+}
+header ul a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.89rem;
+  font-weight: 500;
+}
+header ul a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+header button.menu {
+  display: none;
+}
+@media (max-width: 767px) {
+  header.flex ul.flex {
+    display: none;
+  }
+  header button.menu {
+    display: block;
+  }
+}
+/* ============= 2- Icons & button ============= */
+header .icon-menu,
+header .mode {
+  background-color: var(--bgHeader);
+  color: var(--subtitle);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+  transition: var(--transition);
+}
+header .icon-menu:hover,
+header .mode:hover {
+  color: var(--subtitle);
+  border: 1px solid rgb(244, 165, 96);
+}
+header .icon-sun,
+header .icon-sun:hover {
+  color: rgb(244, 165, 96);
+}
+header .icon-close {
+  font-size: 1.2rem;
+  color: var(--subtitle);
+  transition: var(--transition);
+}
+header .icon-close:hover {
+  font-size: 1.4rem;
+  color: rgb(244, 165, 96);
+  rotate: 180deg;
+}
+/* ============= 3- Modal / pop up ============= */
+header .fixed {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(40, 40, 48, 0.91);
+  z-index: 99;
+  backdrop-filter: blur(4px);
+}
+header .fixed .modal {
+  width: 75%;
+  margin-inline: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  animation: in-out 0.8s;
+}
+@keyframes in-out {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+header .modal li:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+header .modal li:first-child {
+  text-align: right;
+  border: none;
+  padding: 0.2rem 0 0;
+}
+header .modal li {
+  padding: 0.5rem 0 0.77rem;
+}
+header .modal a {
+  font-size: 1rem;
+}

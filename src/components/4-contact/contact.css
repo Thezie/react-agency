@@ -1,0 +1,102 @@
+/* ============== table of contents ============== 
+    1- title & form 
+    2- animation & responsive
+*/
+/* ============= 1- title & form ============= */
+
+.contact .title {
+  color: var(--title);
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+.contact .icon-envelop {
+  color: var(--subtitle);
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+.contact .description {
+  color: var(--subtitle);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.contact label {
+  color: var(--subtitle);
+  margin-right: 2rem;
+}
+.contact div.flex {
+  align-items: center;
+}
+
+.contact #email,
+.contact #message {
+  background-color: rgba(63, 63, 70, 0.15);
+  border: 1px solid rgb(63 63 70);
+  width: 20rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+.light .contact #email,
+.light .contact #message {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgb(128, 128, 128, 0.451);
+  box-shadow: 1px 1px 1px rgba(73, 73, 75, 0.105);
+  color: #232324;
+}
+.contact #message {
+  min-height: 9rem;
+  resize: vertical;
+}
+.contact #email:focus,
+.contact #message:focus,
+.contact #email:hover,
+.contact #message:hover {
+  border: 1px solid rgb(45 212 191);
+}
+.light .contact #email:focus,
+.light .contact #message:focus,
+.light .contact #email:hover,
+.light .contact #message:hover {
+  border: 1px solid rgb(78, 80, 80);
+}
+.contact .submit {
+  background-color: rgba(36, 37, 46, 1);
+  border: 1px solid rgb(63 63 70);
+  padding: 0.7rem 1.8rem;
+  margin-top: 1.7rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  align-self: start;
+  transition: var(--transition);
+}
+.contact .submit:hover {
+  scale: 0.96;
+}
+.contact .sent {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  color: var(--subtitle);
+}
+/* ============= 2- animation ============= */
+@media (max-width: 767px) {
+  .contact form {
+    width: 85%;
+  }
+  .contact form .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact label {
+    margin-bottom: 1rem;
+  }
+  .contact #email,
+  .contact #message {
+    width: calc(100% - 2rem);
+  }
+}
+@media (max-width: 1200px) {
+  .contact .contact-animation {
+    display: none;
+  }
+}

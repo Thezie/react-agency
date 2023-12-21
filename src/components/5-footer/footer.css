@@ -1,0 +1,28 @@
+footer {
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+footer .social {
+  gap: 2.5rem;
+  color: var(--subtitle);
+  font-size: 1.5rem;
+}
+footer .social button:hover {
+  font-size: 1.6rem;
+  color: var(--icon-hover);
+  transition: var(--tansition);
+}
+footer .copyright {
+  color: var(--subtitle);
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social {
+    margin-bottom: 3rem;
+  }
+}
